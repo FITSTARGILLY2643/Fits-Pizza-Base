@@ -1,3 +1,4 @@
+// Business Logic
 var price, crust_price, topping_price;
 let total = 0;
 
@@ -8,15 +9,10 @@ function Getpizza(name, size, crust, topping, total) {
     this.topping = topping;
     this.total = total;
 }
-
+// User interface logic
 
 // proceed button
 $(document).ready(function() {
-    // $("button.proceed").click(function(){
-    //   $("button.proceed").hide();
-    //   $("#information").hide();
-    //   $("div.choise").slideDown(1000);
-    // });
     $("button.proceed").click(function(event) {
         let pname = $(".name option:selected").val();
         let psize = $("#size option:selected").val();
@@ -170,7 +166,7 @@ $(document).ready(function() {
             $("#totalbill").append("The total amount to be paid is: " + deliceryamount + "/-");
         });
 
-        // when one clicks place order button
+        // On clicking place order button
         $("button#final-order").click(function(event) {
             event.preventDefault();
 
@@ -185,7 +181,8 @@ $(document).ready(function() {
 
             if ($("input#name").val() && $("input#phone").val() && $("input#location").val() != "") {
 
-                $("#finallmessage").append("Congratulations " + person + "! your order has been received and it will be delivered to you at " + location + ". <br> Total amount to be paid is Ksh. " + deliceryamount + " / -");
+                $("#finallmessage").append("Congratulations " + person + "! your order has been received and it will be delivered to you at " + location + ". <br> Total amount to be paid is Ksh." +
+                    deliceryamount + " / -");
                 $("#totalbill").hide();
                 $("#finallmessage").slideDown(1200);
             } else {
