@@ -22,7 +22,7 @@ To access this project on your local files, you can clone it using these steps
 1. JS
 1. jQuerry
 ### Live Site
-View [live](https://fitstargilly2643.github.io/Delani-Studio/)
+View [live](https://fitstargilly2643.github.io/Fits-Pizza-Base/)
 ### Contacts
 Reach us on fitspizzabase@moringa.com or call +254 725 060 098
 ### Licence
