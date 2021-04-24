@@ -4,7 +4,7 @@ Gilbert Kiprotich Mutai
 ## Description
 This is a web application that describes a Pizza shop called Fits Pizza Base. It shows services,their menu, opening hours and how orders are made by the customer.
 ### Screenshot
-![img/landing.png]
+![](./img/landing.png)
 ### Prerequisites
 You need to have git installed
 You can install it with the following command in your terminal
