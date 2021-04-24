@@ -27,7 +27,7 @@
         <div class="row" id="menu-top">
 
             <div class="col-md-6">
-                <p><b>Pizza</b></p>
+                <p class="pizza"><b>Pizza</b></p>
                 <img src="./img/pizza/neapolitan-image.jpeg" alt="pizza 1" height="120px" width="140px" class="p1">
                 <img src="./img/pizza/chicago.jpeg" alt="pizza 2" height="120px" width="140px" class="p2">
                 <img src="./img/pizza/new-york.jpeg" alt="pizza 3" height="120px" width="140px" class="p3"><br>
@@ -36,24 +36,25 @@
                 <img src="./img/pizza/greek.jpeg" alt="pizza 5" height="120px" width="140px" class="p5">
                 <img src="./img/pizza/carlifonia.jpeg" alt="pizza 6" height="120px" width="140px" class="p6">
 
-                <p><b>Crust</b></p>
+                <p class="pizza"><b>Crust</b></p>
                 <img src="./img/crust/glutten.webp" alt="crust 1" height="120px" width="140px" class="c1">
                 <img src="./img/crust/crispy.webp" alt="crust 2" height="120px" width="140px" class="c2">
                 <img src="./img/crust/stuffed.webp" alt="crust 3" height="120px" width="140px" class="c3">
 
-                <p><b>Toppings</b></p>
+                <p class="pizza"><b>Toppings</b></p>
                 <img src="./img/toppings/sausage.webp" alt="Toping 1" height="120px" width="140px" class="t1">
                 <img src="./img/toppings/bacon.jpg" alt="Toping 1" height="120px" width="140px" class="t2">
                 <img src="./img/toppings/mushrooms.webp" alt="Toping 1" height="120px" width="140px" class="t3">
 
             </div>
 
-            <div class="col-md-6"><br><br>
+            <div class="col-md-6">
 
                 <!-- Pizza size table -->
                 <table style="width:100%" class="t-one">
                     <caption>
-                        <b>Pizza types,Crust,Toppings and their correspondinding prices</b></caption>
+                        Pizza types,Crust,Toppings and their correspondinding prices
+                    </caption>
                     <tr>
                         <th>Size</th>
                         <th>Price</th>
@@ -124,9 +125,7 @@
                     </tr>
                 </table>
 
-
             </div>
-
 
         </div>
 
@@ -142,7 +141,7 @@
             <h2><b>Go through our menu and order your favourite Pizza today!</b></h2>
             <div class="row">
                 <div class="col-sm-5">
-                    <form action="">
+                    <form id="myform" action="">
                         <label for="select">Select Your Flavor</label><br>
                         <select class="browser-default custom-select custom-select-md mb-3 name">
                             <option selected value="choose">Select your flavor</option>
@@ -152,21 +151,21 @@
                             <option value="Sicilian Pizza">Sicilian Pizza</option>
                             <option value="Greek Pizza">Greek Pizza</option>
                             <option value="Carlifornia Pizza">Carlifornia Pizza</option>
-                        </select><br>
-                        <label for="select">Select the Size</label><br>
+                        </select><br><br>
+                        <label for="select">Select the Size   </label><br>
                         <select class="browser-default custom-select custom-select-md mb-3" id="size">
                             <option selected value="0">Select the Size here</option>
                             <option value="large">Large @Ksh. 800</option>
                             <option value="medium">Medium @Ksh. 600</option>
                             <option value="small">Small @Ksh. 400</option>
-                        </select><br>
+                        </select><br><br>
                         <label for="crust">Select your favorite Crust</label><br>
                         <select class="browser-default custom-select custom-select-md mb-3 " id="crust">
                             <option selected value="0 ">Select your favorite Crust</option>
                             <option value="Crispy">Crispy @Ksh. 120</option>
                             <option value="Stuffed">Stuffed @Ksh. 80</option>
                             <option value="Gluten-free">Gluten@Ksh. 140</option>
-                        </select><br>
+                        </select><br><br>
                         <label for="Toppings">Select Your Favourite Toppings</label><br>
                         <div class="custom-control custom-checkbox custom-control-inline">
                             <input type="checkbox" class="custom-control-input" id="Sausage" value="Sausage" name="toppings">
@@ -181,7 +180,7 @@
                             <label class="custom-control-label" for="Mushrooms">Mushrooms</label>
 
                         </div>
-                        <p><b>Each topping cost Ksh.60</b></p>
+                        <!-- <p><b>Each topping cost Ksh.60</b></p> -->
 
                         <button type="submit" class="btn btn-orange proceed">Proceed</button>
 
@@ -239,8 +238,7 @@
                 </div>
             </div>
         </div>
-    </div>
-
+    </div><br>
     <!-- Contact us section -->
 
     <div class="container-fluid bg-default" id="contact">
@@ -276,8 +274,9 @@
         </div>
         <!-- Footer section -->
         <div class="row">
-            <div class="container text-center footer">
-                <p>&copy; 2021 | Fits Pizza Base</p>
+            <div class="container text-center footer"><br><br>
+                <b><p id="copyright">&copy; 2021 | Fits Pizza Base</p></b><br><br><br><br>
+
             </div>
         </div>
     </div>
