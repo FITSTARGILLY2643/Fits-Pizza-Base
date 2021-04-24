@@ -227,7 +227,12 @@
         color: white;
     }
     
-    .choise h2 {
+    caption {
+        color: black;
+        font-size: 15px;
+    }
+    
+    cap .choise h2 {
         color: maroon;
         text-align: left;
     }
