@@ -179,9 +179,16 @@ $(document).ready(function() {
             let phone = $("input#phone").val();
             let location = $("input#location").val();
 
+            // Getting date and time
+            var today = new Date();
+            var date = today.getDate() + '-' + (today.getMonth() + 1) + '-' + today.getFullYear();
+            var time = (today.getHours() + 3) + ":" + (today.getMinutes());
+            var dateTime = date + ' ' + time;
+
             if ($("input#name").val() && $("input#phone").val() && $("input#location").val() != "") {
 
-                $("#finallmessage").append("Congratulations " + person + "! your order has been received and it will be delivered to you at " + location + ". <br> Total amount to be paid is Ksh." +
+                $("#finallmessage").append("Congratulations " + person + "! your order has been received and it will be delivered to you at " + location + " before " + time + " " + " " +
+                    date + ". <br> Total amount to be paid is Ksh." +
                     deliceryamount + " / -");
                 $("#totalbill").hide();
                 $("#finallmessage").slideDown(1200);
