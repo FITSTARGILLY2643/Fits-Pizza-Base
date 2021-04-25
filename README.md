@@ -26,7 +26,7 @@ View [live](https://fitstargilly2643.github.io/Fits-Pizza-Base/)
 ### Contacts
 Reach us on fitspizzabase@moringa.com or call +254 725 060 098
 ### Licence
-This project is under the  [MIT](LICENSE) licence
+This project is under the  [MIT](LICENSE)
 License format:
 MIT License
 Copyright (c) 2021 (Gilbert Kiprotich Mutai)
