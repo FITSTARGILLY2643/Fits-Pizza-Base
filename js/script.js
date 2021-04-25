@@ -57,7 +57,14 @@ $(document).ready(function() {
             default:
                 console.log("No price");
         }
-        let topping_value = ptopping.length * 60;
+        // var topping_value = ptopping.length * 0;
+        if (psize == "large") {
+            var topping_value = ptopping.length * 100;
+        } else if (psize == "medium") {
+            var topping_value = ptopping.length * 80;
+        } else {
+            var topping_value = ptopping.length * 50;
+        }
         console.log("toppins value" + topping_value);
 
         if ((psize == "0") && (pcrust == "0")) {
@@ -127,7 +134,16 @@ $(document).ready(function() {
                 default:
                     console.log("No price");
             }
-            let topping_value = ptopping.length * 60;
+            // let topping_value = ptopping.length * 60;
+
+            if (psize == "large") {
+                var topping_value = ptopping.length * 100;
+            } else if (psize == "medium") {
+                var topping_value = ptopping.length * 80;
+            } else {
+                var topping_value = ptopping.length * 50;
+            }
+
             console.log("toppins value" + topping_value);
             total = price + crust_price + topping_value;
             console.log(total);
