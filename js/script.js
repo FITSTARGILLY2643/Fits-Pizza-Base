@@ -14,6 +14,7 @@ function Getpizza(name, size, crust, topping, total) {
 // proceed button
 $(document).ready(function() {
     $("button.proceed").click(function(event) {
+        $("button.cancel").hide();
         let pname = $(".name option:selected").val();
         let psize = $("#size option:selected").val();
         let pcrust = $("#crust option:selected").val();
@@ -134,7 +135,6 @@ $(document).ready(function() {
                 default:
                     console.log("No price");
             }
-            // let topping_value = ptopping.length * 60;
 
             if (psize == "large") {
                 var topping_value = ptopping.length * 100;
@@ -163,10 +163,26 @@ $(document).ready(function() {
         $("button#checkout").click(function() {
             $("button#checkout").hide();
             $("button.addPizza").hide();
+            $("button.cancel").slideDown(1000);
             $("button.deliver").slideDown(1000);
             $("#addedprice").slideDown(1000);
             console.log("Your total bill equals to Ksh. " + checkoutTotal + "/-");
             $("#pizzatotal").append("Your bill is Ksh. " + checkoutTotal + "/-");
+            // $("#ordersmade").text("");
+        });
+        // cancel button
+
+        $("button.cancel").click(function() {
+            $("button#checkout").hide();
+            $("button.addPizza").hide();
+            $("button.cancel").hide();
+            $("button.deliver").hide();
+            $("h2#summary").hide();
+            $("#pizzatotal").text("You've Successfully cancel the order. Nothing in the cart.");
+            $("#addedprice").text("");
+            $("#ordersmade").text("");
+
+
         });
 
         // home delivery button
@@ -176,6 +192,7 @@ $(document).ready(function() {
             $(".delivery").slideDown(1000);
             $("#addedprice").hide();
             $("button.deliver").hide();
+            $("button.cancel").hide();
             $("#pizzatotal").hide();
             let deliceryamount = checkoutTotal + 300;
             console.log("You will pay sh. " + deliceryamount + " on delivery");
@@ -198,7 +215,7 @@ $(document).ready(function() {
             // Getting date and time
             var today = new Date();
             var date = today.getDate() + '-' + (today.getMonth() + 1) + '-' + today.getFullYear();
-            var time = (today.getHours() + 3) + ":" + (today.getMinutes());
+            var time = (today.getHours() + 1) + ":" + (today.getMinutes());
             var dateTime = date + ' ' + time;
 
             if ($("input#name").val() && $("input#phone").val() && $("input#location").val() != "") {
