@@ -126,6 +126,10 @@
                 padding: 10px;
             }
             
+            .t-one td {
+                width: 50%
+            }
+            
             .t-one th {
                 border: 1px solid #ddd;
                 text-align: left;
